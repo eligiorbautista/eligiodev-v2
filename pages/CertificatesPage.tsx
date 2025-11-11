@@ -44,10 +44,12 @@ const CertificatesPage: React.FC = () => {
         />
       </div>
 
-      <div className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
         {filteredCertificates.length > 0 ? (
           filteredCertificates.map((cert, index) => (
-            <CertificateCard key={index} certificate={cert} />
+            <div key={index} className="h-full">
+              <CertificateCard certificate={cert} />
+            </div>
           ))
         ) : (
           <div className="text-center py-16">

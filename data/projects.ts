@@ -7,7 +7,7 @@ export const PROJECTS: Project[] = [
     description:
       "Sent. Candles, a modern and responsive marketing website for a handcrafted candle brand. This full-stack project features a clean product catalog and event galleries. It includes a complete admin panel built from scratch, allowing for full CRUD management of all site content, products, and events using Supabase as the backend.",
     tags: ["JavaScript", "React", "Tailwind CSS", "Supabase"],
-    date: "March 2024",
+    date: "October 2025",
     liveUrl: "https://sentcandles.netlify.app",
     repoUrl: "",
   },
@@ -36,8 +36,8 @@ export const PROJECTS: Project[] = [
     title: "Laboratory Inventory Management System (LIMS)",
     description:
       "A comprehensive system for managing laboratory inventory, including tracking samples, reagents, and equipment. Features user authentication, role-based access control, and a responsive design.",
-    tags: ["HTML5", "Tailwind CSS", "PHP", "Laravel", "MySQL"],
-    date: "March 2024",
+      tags: ["React", "Tailwind CSS", "Express.js", "MongoDB", "OpenAI API"],
+    date: "May 2025",
     liveUrl: "",
     repoUrl: "",
   },
@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
     title: "NiyogHub Mobile App",
     description:
       "NiyogHub is an innovative web & mobile application developed for coconut farmers in Quezon Province. This capstone project, created alongside my group mates Leonna Almendras and Nikki Bernardo, features real-time chat support, a voice AI assistant, a chat AI assistant, coconut leaf disease classification, and a suitability map.",
-    tags: ["HTML5", "CSS3", "PHP", "Laravel", "MySQL"],
+    tags: ["React Native", "Tailwind CSS", "Express.js", "MongoDB", "OpenAI API"],
     date: "March 2025",
     liveUrl: "",
     repoUrl: "",

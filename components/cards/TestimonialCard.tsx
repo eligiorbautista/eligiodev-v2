@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Testimonial } from '../../types';
 import { ICONS } from '../ui/Icons';
-import ImageModal from '../ui/ImageModal';
+import TestimonialModal from '../ui/modals/TestimonialModal';
 
 const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -31,7 +31,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
           </div>
         </div>
       </div>
-      <ImageModal
+      <TestimonialModal
         isOpen={isModalOpen}
         imageUrl={testimonial.projectImage}
         alt={`Project for ${testimonial.name}`}

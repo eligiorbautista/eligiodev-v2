@@ -78,13 +78,15 @@ const ProjectsPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+            <div key={index} className="h-full">
+              <ProjectCard project={project} />
+            </div>
           ))
         ) : (
-          <div className="md:col-span-2 lg:col-span-3 text-center py-16">
+          <div className="md:col-span-2 text-center py-16">
             <p className="text-2xl font-mono text-text-secondary">No projects match your criteria.</p>
           </div>
         )}

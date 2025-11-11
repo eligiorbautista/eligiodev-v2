@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Project } from '../../types';
 import { ICONS } from '../ui/Icons';
-import ImageModal from '../ui/ImageModal';
+import ProjectModal from '../ui/modals/ProjectModal';
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -9,8 +9,15 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <>
       <div className="bg-primary border border-accent/20 p-6 flex flex-col h-full group hover:border-accent/50 transition-all duration-300">
-        <div className="relative mb-4 overflow-hidden cursor-pointer" onClick={() => setIsModalOpen(true)}>
-          <img src={project.image} alt={project.title} className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div
+          className="relative mb-4 overflow-hidden cursor-pointer bg-primary/40"
+          onClick={() => setIsModalOpen(true)}
+        >
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
         </div>
         <div className="flex-grow flex flex-col min-h-0">
           <h3 className="text-2xl font-mono text-accent mb-1 line-clamp-1">{project.title}</h3>
@@ -25,21 +32,43 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             )}
           </div>
         </div>
-        
-        <div className="flex items-center space-x-4 mt-auto pt-4 border-t border-accent/10">
+        <div className="flex flex-wrap items-center gap-3 mt-auto pt-4 border-t border-accent/10">
+          <button
+            type="button"
+            onClick={() => setIsModalOpen(true)}
+            className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wide text-text-secondary hover:text-accent transition-colors"
+            data-cursor-interactive
+          >
+            {ICONS.eye}
+            View Details
+          </button>
           {project.repoUrl && (
-            <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors duration-300" data-cursor-interactive>
+            <a
+              href={project.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wide text-text-secondary hover:text-accent transition-colors"
+              data-cursor-interactive
+            >
               {ICONS.github}
+              GitHub
             </a>
           )}
           {project.liveUrl && (
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors duration-300" data-cursor-interactive>
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wide text-text-secondary hover:text-accent transition-colors"
+              data-cursor-interactive
+            >
               {ICONS.link}
+              Live Demo
             </a>
           )}
         </div>
       </div>
-      <ImageModal
+      <ProjectModal
         isOpen={isModalOpen}
         imageUrl={project.image}
         alt={project.title}

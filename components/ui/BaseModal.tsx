@@ -6,9 +6,10 @@ interface BaseModalProps {
   onClose: () => void;
   children: React.ReactNode;
   ariaLabel?: string;
+  showCloseButton?: boolean;
 }
 
-const BaseModal: React.FC<BaseModalProps> = ({ isOpen, onClose, children, ariaLabel = "Modal" }) => {
+const BaseModal: React.FC<BaseModalProps> = ({ isOpen, onClose, children, ariaLabel = "Modal", showCloseButton = true }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -52,17 +53,19 @@ const BaseModal: React.FC<BaseModalProps> = ({ isOpen, onClose, children, ariaLa
         overflowY: 'auto',
       }}
     >
-      <button
-        onClick={onClose}
-        className="fixed top-4 right-4 text-text-secondary hover:text-accent transition-colors duration-300 z-[10002] bg-background/80 backdrop-blur-sm p-2 rounded-full border border-accent/30 hover:border-accent"
-        aria-label="Close modal"
-        data-cursor-interactive
-        style={{ position: 'fixed' }}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+      {showCloseButton && (
+        <button
+          onClick={onClose}
+          className="fixed top-4 right-4 text-text-secondary hover:text-accent transition-colors duration-300 z-[10002] bg-background/80 backdrop-blur-sm p-2 rounded-full border border-accent/30 hover:border-accent"
+          aria-label="Close modal"
+          data-cursor-interactive
+          style={{ position: 'fixed' }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      )}
       {children}
     </div>
   );

@@ -45,13 +45,15 @@ const TestimonialsPage: React.FC = () => {
         />
       </div>
 
-      <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
         {filteredTestimonials.length > 0 ? (
           filteredTestimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} testimonial={testimonial} />
+            <div key={index} className="h-full">
+              <TestimonialCard testimonial={testimonial} />
+            </div>
           ))
         ) : (
-          <div className="lg:col-span-2 xl:col-span-3 text-center py-16">
+          <div className="md:col-span-2 text-center py-16">
             <p className="text-2xl font-mono text-text-secondary">No testimonials match your search.</p>
           </div>
         )}

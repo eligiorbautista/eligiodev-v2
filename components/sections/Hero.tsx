@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { USER_INFO } from "../../config/site";
-import PasswordModal from "../ui/PasswordModal";
+import PasswordModal from "../ui/modals/PasswordModal";
 import Toast from "../ui/Toast";
-import SimpleImageModal from "../ui/SimpleImageModal";
+import ProfileImageModal from "../ui/modals/ProfileImageModal";
 
 const Hero: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -74,18 +74,14 @@ const Hero: React.FC = () => {
         </div>
         <div className="hidden lg:col-span-2 lg:flex items-center justify-center">
           <div
-            className="relative w-64 h-64 lg:w-80 lg:h-80 group opacity-0 animate-fade-in cursor-pointer"
+            className="relative w-64 h-64 lg:w-96 lg:h-96 group opacity-0 animate-fade-in cursor-pointer"
             style={{ animationDelay: "300ms" }}
             onClick={() => setIsImageModalOpen(true)}
             data-cursor-interactive
           >
             {/* Outer glow effect */}
             <div className="absolute -inset-1 bg-gradient-to-br from-accent/20 via-accent/10 to-transparent rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
-            
-            {/* Animated border frame */}
-            <div className="absolute inset-0 border-2 border-accent/40 rounded-lg transition-all duration-500 group-hover:border-accent group-hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"></div>
-            
-            {/* Inner image container with offset effect */}
+            {/* Inner image container */}
             <div className="absolute inset-2 rounded-lg overflow-hidden bg-background transition-transform duration-500 group-hover:scale-[1.02]">
               <img
                 src={USER_INFO.hero.profileImageUrl}
@@ -93,10 +89,6 @@ const Hero: React.FC = () => {
                 className="w-full h-full object-cover transition-all duration-700 grayscale-[0.3] group-hover:grayscale-0 group-hover:scale-105"
               />
             </div>
-            
-            {/* Decorative corner accents */}
-            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent/30 rounded-tl-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent/30 rounded-br-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
         </div>
       </section>
@@ -110,7 +102,7 @@ const Hero: React.FC = () => {
         isVisible={showToast}
         onClose={() => setShowToast(false)}
       />
-      <SimpleImageModal
+      <ProfileImageModal
         isOpen={isImageModalOpen}
         imageUrl={USER_INFO.hero.profileImageUrl}
         alt="Eligio Bautista III"
