@@ -63,8 +63,8 @@ export const SKILLS = [
 ];
 
 export const SOCIAL_LINKS = {
-  github: "#",
-  linkedin: "#",
-  facebook: "#",
+  github: "https://github.com/eligiorbautista",
+  linkedin: "https://www.linkedin.com/in/eligiorbautista/",
+  facebook: "https://www.facebook.com/elirbautista",
   email: "mailto:eligiobautista.dev@gmail.com",
 };
