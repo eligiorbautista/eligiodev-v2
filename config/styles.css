@@ -1,0 +1,17 @@
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000; /* tailwind bg-background */
+  color: #ffffff; /* tailwind text-text-main */
+  font-family: "Inter", "ui-sans-serif", "system-ui", "sans-serif"; /* tailwind font-sans */
+}
+
+@media (pointer: fine) {
+  [data-cursor-interactive] {
+    cursor: none;
+  }
+}
+
