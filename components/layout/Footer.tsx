@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           </a>
         </div>
         <p className="font-mono text-sm">
-          Designed & Built by {USER_INFO.name}
+          Portfolio by {USER_INFO.name}
         </p>
         <p className="font-mono text-xs mt-1">
           &copy; {new Date().getFullYear()}
