@@ -34,7 +34,7 @@ const CertificateCard: React.FC<{ certificate: Certificate }> = ({ certificate }
       </div>
       <div className="flex-1 w-full min-h-0 self-stretch flex flex-col justify-between gap-4">
         <div>
-          <h3 className="text-xl font-bold text-text-main leading-snug mb-3">
+          <h3 className="text-lg sm:text-xl font-bold text-text-main leading-snug mb-2 sm:mb-3">
             {certificate.title}
           </h3>
           <p className="text-text-secondary">
@@ -46,7 +46,7 @@ const CertificateCard: React.FC<{ certificate: Certificate }> = ({ certificate }
           <button
             type="button"
             onClick={handleImageClick}
-            className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wide text-text-secondary hover:text-accent transition-colors"
+            className="inline-flex items-center gap-2 font-mono text-xs sm:text-sm uppercase tracking-wide text-text-secondary hover:text-accent transition-colors"
             data-cursor-interactive
           >
             {ICONS.eye}
@@ -57,7 +57,7 @@ const CertificateCard: React.FC<{ certificate: Certificate }> = ({ certificate }
               href={sanitizedUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wide text-accent hover:text-accent-secondary transition-colors"
+              className="inline-flex items-center gap-2 font-mono text-xs sm:text-sm uppercase tracking-wide text-accent hover:text-accent-secondary transition-colors"
               data-cursor-interactive
               onClick={(e) => e.stopPropagation()}
             >
@@ -72,7 +72,7 @@ const CertificateCard: React.FC<{ certificate: Certificate }> = ({ certificate }
 
   return (
     <>
-      <div className="bg-primary border border-accent/20 p-4 h-full hover:bg-accent/5 hover:border-accent/50 transition-all duration-300 flex flex-col md:flex-row items-center md:items-stretch gap-6">
+      <div className="bg-primary border border-accent/20 p-4 sm:p-5 h-full hover:bg-accent/5 hover:border-accent/50 transition-all duration-300 flex flex-col md:flex-row items-center md:items-stretch gap-5 sm:gap-6">
         {CardContent}
       </div>
       <CertificateModal

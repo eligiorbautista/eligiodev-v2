@@ -113,7 +113,7 @@ const Header: React.FC = () => {
           <Link 
             to="/"
             onClick={handleLogoClick}
-            className="text-2xl font-mono text-accent hover:animate-pulse"
+            className="text-xl sm:text-2xl font-mono text-accent hover:animate-pulse"
             data-cursor-interactive
           >
             &lt;ELI DEV/&gt;
@@ -146,8 +146,8 @@ const Header: React.FC = () => {
       {/* Mobile Menu Panel */}
       <div className={`fixed inset-0 bg-background/95 backdrop-blur-sm z-40 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
         <div className="flex flex-col items-center justify-center h-full">
-          <nav className="flex flex-col items-center space-y-8">
-            {NAVIGATION_LINKS.map((link) => renderNavLink(link, "font-mono text-3xl text-text-main hover:text-accent transition-colors duration-300"))}   
+          <nav className="flex flex-col items-center space-y-6">
+            {NAVIGATION_LINKS.map((link) => renderNavLink(link, "font-mono text-2xl text-text-main hover:text-accent transition-colors duration-300"))}   
           </nav>
         </div>
       </div>

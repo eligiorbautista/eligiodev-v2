@@ -18,7 +18,7 @@ export const PROJECTS: Project[] = [
       "A personal portfolio website showcasing my skills, projects, and experience as a developer. Built with a modern tech stack, it features a responsive design and smooth user interactions.",
     tags: ["JavaScript", "React"],
     date: "May 2023 - November 2025",
-    liveUrl: "https://eligiobautista.dev",
+    liveUrl: "https://eligiodev.vercel.app",
     repoUrl: "",
   },
   {

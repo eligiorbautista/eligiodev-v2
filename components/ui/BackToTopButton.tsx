@@ -32,7 +32,7 @@ const BackToTopButton: React.FC = () => {
     <button
       type="button"
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 z-30 group transition-all duration-500 ease-out ${
+      className={`fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-30 group transition-all duration-500 ease-out ${
         isVisible 
           ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto' 
           : 'opacity-0 translate-y-4 scale-95 pointer-events-none'
@@ -44,7 +44,7 @@ const BackToTopButton: React.FC = () => {
       <div className="absolute inset-0 rounded-full bg-accent/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
       
       {/* Main button */}
-      <div className="relative bg-primary border-2 border-accent/40 rounded-full p-4 shadow-lg shadow-accent/10 hover:border-accent hover:shadow-xl hover:shadow-accent/20 transition-all duration-300 hover:scale-110 active:scale-95">
+      <div className="relative bg-primary border-2 border-accent/40 rounded-full p-3 sm:p-4 shadow-lg shadow-accent/10 hover:border-accent hover:shadow-xl hover:shadow-accent/20 transition-all duration-300 hover:scale-110 active:scale-95">
         {/* Inner gradient background on hover */}
         <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         
