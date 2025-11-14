@@ -30,8 +30,8 @@ const CertificatesPage: React.FC = () => {
           </svg>
           Back to Home
         </button>
-        <h1 className="text-5xl md:text-6xl font-mono text-text-main">All Certificates</h1>
-        <p className="text-text-secondary mt-2">A comprehensive list of my professional certifications.</p>
+        <h1 className="text-5xl md:text-6xl font-mono text-text-main">All Certificates & Awards</h1>
+        <p className="text-text-secondary mt-2">A comprehensive list of my certifications, awards, recognitions, and achievements.</p>
       </header>
 
       <div className="mb-8 sticky top-0 bg-background/90 backdrop-blur-sm py-4 z-10">
