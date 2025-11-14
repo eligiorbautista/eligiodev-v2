@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
     <>
       <section
         id="home"
-        className="min-h-screen grid lg:grid-cols-5 items-center gap-y-0 gap-x-6 sm:gap-10 lg:gap-12 py-28 sm:py-20 lg:py-24"
+        className="min-h-screen grid lg:grid-cols-5 items-center gap-y-6 sm:gap-y-0 gap-x-6 sm:gap-10 lg:gap-12 py-28 sm:py-20 lg:py-24"
       >
         <div className="order-2 lg:order-1 lg:col-span-3 opacity-0 animate-fade-in-up text-left space-y-2.5 sm:space-y-6">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-sans text-accent flex items-center">
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
             </button>
           </div>
         </div>
-        <div className="order-1 lg:order-2 lg:col-span-2 flex items-center justify-center mb-0 sm:mb-8 lg:mb-0">
+        <div className="order-1 lg:order-2 lg:col-span-2 flex items-center justify-center mb-4 sm:mb-8 lg:mb-0">
           <div
             className="relative w-80 h-80 sm:w-[22rem] sm:h-[22rem] md:w-96 md:h-96 lg:w-[26rem] lg:h-[26rem] group opacity-0 animate-fade-in cursor-pointer"
             style={{ animationDelay: "300ms" }}

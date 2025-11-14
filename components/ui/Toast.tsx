@@ -23,7 +23,7 @@ const Toast: React.FC<ToastProps> = ({ message, isVisible, onClose, duration = 3
 
   return (
     <div
-      className="fixed bottom-10 left-1/2 -translate-x-1/2 w-full max-w-sm bg-primary border-2 border-accent text-text-main font-mono shadow-lg shadow-accent/20 z-[10000] animate-fade-in-up overflow-hidden"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-full max-w-sm bg-primary border-2 border-accent text-text-main font-mono shadow-lg shadow-accent/20 z-[10000] animate-fade-in-up overflow-hidden"
       role="alert"
     >
       <div className="flex items-center justify-between p-4">

@@ -10,7 +10,7 @@ export const EXPERIENCE: Experience[] = [
         ],
     },
     {
-        role: "Junior Full Stack Web Developer",
+        role: "Junior Full Stack Web Developer Intern",
         company: "ICTD - MSEUF",
         duration: "February - May 2025",
         description: [
