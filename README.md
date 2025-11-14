@@ -10,8 +10,6 @@ A retro-modern portfolio for Eli Dev (Eligio Bautista III), a web developer from
 
 ---
 
-![Eli Dev Portfolio Screenshot](https://picsum.photos/seed/project1/1200/600)
-
 ## About The Project
 
 This project is a complete personal portfolio website built from the ground up. It serves as a central hub for my professional work, including featured projects, career history, certifications, and client testimonials. The design is inspired by retro-futuristic aesthetics, combining modern web technologies with a nostalgic, terminal-like feel.
@@ -44,7 +42,7 @@ Follow these steps to run the project on your local machine for development and 
 
 1.  Clone the repository to your local machine:
     ```sh
-    git clone https://github.com/your-username/your-repo-name.git
+    git clone https://github.com/eligiorbautista/eligiodev-v2.git
     ```
 2.  Navigate to the project directory:
     ```sh
@@ -69,10 +67,10 @@ Once the installation is complete, you can start the development server:
 npm run dev
 ```
 
-This will start the application, and you can view it in your browser at `http://localhost:5173`. The server supports hot-reloading, so any changes you make to the code will be reflected in the browser instantly.
+This will start the application, and you can view it in your browser at `http://localhost:3000`. The server supports hot-reloading, so any changes you make to the code will be reflected in the browser instantly.
 
 ## Contact
 
 Eligio Bautista III - [eligiobautista.dev@gmail.com](mailto:eligiobautista.dev@gmail.com)
 
-Project Link: [https://github.com/your-username/your-repo-name](https://github.com/your-username/your-repo-name)
+Project Link: [https://github.com/eligiorbautista/eligiodev-v2](https://github.com/eligiorbautista/eligiodev-v2)
