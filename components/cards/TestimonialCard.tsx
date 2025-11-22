@@ -8,11 +8,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
 
   return (
     <>
-      <div className="bg-primary border border-accent/20 flex flex-col h-full group transform hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-        <div className="relative h-44 sm:h-48 flex-shrink-0 overflow-hidden cursor-pointer" onClick={() => setIsModalOpen(true)}>
-          <img src={testimonial.projectImage} alt={`Project for ${testimonial.name}`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-        </div>
-
+      <div className="bg-primary border border-accent/20 flex flex-col h-full group transform hover:-translate-y-2 transition-all duration-300 overflow-hidden cursor-pointer" onClick={() => setIsModalOpen(true)}>
         <div className="p-5 sm:p-6 flex flex-col flex-grow relative min-h-0">
           <div className="absolute top-5 sm:top-6 left-5 sm:left-6 h-10 sm:h-12 w-10 sm:w-12 text-accent/20 pointer-events-none">
             {ICONS.quote}
@@ -22,7 +18,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
           </div>
           
           <div className="flex items-center space-x-4 mt-auto">
-            <img src={testimonial.clientImage} alt={testimonial.name} className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-accent/50 flex-shrink-0" />
+            <img src={testimonial.clientImage ? testimonial.clientImage : 'https://ui-avatars.com/api/?name=' + testimonial.name + '?background=0000000&color=000'} alt={testimonial.name} className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-accent/50 flex-shrink-0" />
             <div className="min-w-0">
               <h3 className="text-lg sm:text-xl font-bold text-text-main mt-1 truncate">{testimonial.name}</h3>
               <p className="text-text-secondary font-mono text-xs sm:text-sm truncate">{testimonial.position} • {testimonial.company}</p>
@@ -33,8 +29,6 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
       </div>
       <TestimonialModal
         isOpen={isModalOpen}
-        imageUrl={testimonial.projectImage}
-        alt={`Project for ${testimonial.name}`}
         onClose={() => setIsModalOpen(false)}
         testimonialData={testimonial}
       />

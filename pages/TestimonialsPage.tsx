@@ -31,14 +31,14 @@ const TestimonialsPage: React.FC = () => {
           </svg>
           Back to Home
         </button>
-        <h1 className="text-5xl md:text-6xl font-mono text-text-main">Client Testimonials</h1>
-        <p className="text-text-secondary mt-2">What my clients have to say about our collaborations.</p>
+        <h1 className="text-5xl md:text-6xl font-mono text-text-main">Testimonials</h1>
+        <p className="text-text-secondary mt-2">What my clients, colleagues, supervisors, and professors have to say about my work.</p>
       </header>
 
        <div className="mb-8 sticky top-0 bg-background/90 backdrop-blur-sm py-4 z-10">
         <input
           type="text"
-          placeholder="Search by client, company, or keyword..."
+          placeholder="Search by name, company, or keyword..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="w-full bg-primary border-2 border-accent/30 focus:border-accent focus:ring-accent/50 focus:ring-2 text-text-main p-3 font-mono transition-colors duration-300"
