@@ -13,7 +13,7 @@ const Contact: React.FC = () => {
         </p>
         <a 
           href={SOCIAL_LINKS.email}
-          className="inline-block font-mono text-sm sm:text-base bg-transparent border-2 border-accent text-accent px-5 py-2.5 sm:px-7 sm:py-3 hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background transition-all duration-300"
+          className="inline-block font-mono text-sm sm:text-base bg-transparent border-2 border-accent text-accent px-5 py-2.5 sm:px-7 sm:py-3 hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background transition-all duration-300 btn-press"
           data-cursor-interactive
         >
           {USER_INFO.contact.cta}

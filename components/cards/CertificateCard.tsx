@@ -72,7 +72,8 @@ const CertificateCard: React.FC<{ certificate: Certificate }> = ({ certificate }
 
   return (
     <>
-      <div className="bg-primary border border-accent/20 p-4 sm:p-5 h-full hover:bg-accent/5 hover:border-accent/50 transition-all duration-300 flex flex-col md:flex-row items-center md:items-stretch gap-5 sm:gap-6">
+      <div className="group bg-primary border border-accent/20 p-4 sm:p-5 h-full hover:bg-accent/5 hover:border-accent/50 transition-all duration-300 flex flex-col md:flex-row items-center md:items-stretch gap-5 sm:gap-6 relative overflow-hidden">
+        <div className="absolute -inset-1 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
         {CardContent}
       </div>
       <CertificateModal

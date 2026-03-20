@@ -58,14 +58,14 @@ const Hero: React.FC = () => {
             <a
               href="#projects"
               onClick={handleScrollToProjects}
-              className="inline-block font-mono text-sm sm:text-base bg-transparent border-2 border-accent text-accent px-5 py-2.5 sm:px-7 sm:py-3 hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background transition-all duration-300"
+              className="inline-block font-mono text-sm sm:text-base bg-transparent border-2 border-accent text-accent px-5 py-2.5 sm:px-7 sm:py-3 hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background transition-all duration-300 btn-press"
               data-cursor-interactive
             >
               {USER_INFO.hero.cta}
             </a>
             <button
               onClick={() => setIsModalOpen(true)}
-              className="inline-block font-mono text-sm sm:text-base bg-transparent border-2 border-accent-secondary text-accent-secondary px-5 py-2.5 sm:px-7 sm:py-3 hover:bg-accent-secondary/10 focus:outline-none focus:ring-2 focus:ring-accent-secondary focus:ring-offset-2 focus:ring-offset-background transition-all duration-300"
+              className="inline-block font-mono text-sm sm:text-base bg-transparent border-2 border-accent-secondary text-accent-secondary px-5 py-2.5 sm:px-7 sm:py-3 hover:bg-accent-secondary/10 focus:outline-none focus:ring-2 focus:ring-accent-secondary focus:ring-offset-2 focus:ring-offset-background transition-all duration-300 btn-press"
               data-cursor-interactive
             >
               {USER_INFO.hero.resumeCta}
@@ -79,10 +79,7 @@ const Hero: React.FC = () => {
             onClick={() => setIsImageModalOpen(true)}
             data-cursor-interactive
           >
-            {/* Outer glow effect */}
-            <div className="absolute -inset-1 bg-gradient-to-br from-accent/20 via-accent/10 to-transparent rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
-            {/* Inner image container */}
-            <div className="absolute inset-2 rounded-lg overflow-hidden bg-background transition-transform duration-500 group-hover:scale-[1.02]">
+            <div className="absolute inset-2 rounded-lg overflow-hidden bg-primary border border-accent/20 transition-transform duration-500 group-hover:scale-[1.02]">
               <img
                 src={USER_INFO.hero.profileImageUrl}
                 alt="Eligio Bautista III"

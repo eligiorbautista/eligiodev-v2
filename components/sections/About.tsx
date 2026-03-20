@@ -17,14 +17,16 @@ const About: React.FC = () => {
           <div className="md:col-span-3 text-base sm:text-lg text-text-secondary space-y-4">
             <p>{USER_INFO.about.paragraph1}</p>
             <p>{USER_INFO.about.paragraph2}</p>
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-3 mt-4 text-sm sm:text-base md:text-lg">
+<div className="flex flex-wrap gap-2 sm:gap-3 mt-4">
               {SKILLS.map((skill) => (
-                <li key={skill} className="flex items-center">
-                  <span className="text-accent font-mono mr-3 text-lg sm:text-xl md:text-2xl">&gt;</span>
-                  <span className="text-text-secondary font-mono">{skill}</span>
-                </li>
+                <span 
+                  key={skill} 
+                  className="font-mono text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2 border border-accent/30 text-text-secondary bg-primary/50 hover:bg-accent/10 hover:text-accent hover:border-accent/50 transition-all duration-300 cursor-default"
+                >
+                  {skill}
+                </span>
               ))}
-            </ul>
+            </div>
           </div>
           <div className="md:col-span-2 flex justify-center md:justify-end mt-10 md:mt-0">
             <div
@@ -32,10 +34,7 @@ const About: React.FC = () => {
               onClick={() => setIsImageModalOpen(true)}
               data-cursor-interactive
             >
-              {/* Outer glow effect */}
-              <div className="absolute -inset-1 bg-gradient-to-br from-accent/20 via-accent/10 to-transparent rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
-              {/* Inner image container */}
-              <div className="absolute inset-2 rounded-lg overflow-hidden bg-background transition-transform duration-500 group-hover:scale-[1.02]">
+              <div className="absolute inset-2 rounded-lg overflow-hidden bg-primary border border-accent/20 transition-transform duration-500 group-hover:scale-[1.02]">
                 <img
                   src={USER_INFO.about.profileImageUrl}
                   alt="Eligio Bautista III"

@@ -8,7 +8,8 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
 
   return (
     <>
-      <div className="bg-primary border border-accent/20 flex flex-col h-full group transform hover:-translate-y-2 transition-all duration-300 overflow-hidden cursor-pointer" onClick={() => setIsModalOpen(true)}>
+      <div className="bg-primary border border-accent/20 flex flex-col h-full group transform hover:-translate-y-2 transition-all duration-300 overflow-hidden cursor-pointer relative" onClick={() => setIsModalOpen(true)}>
+        <div className="absolute -inset-1 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
         <div className="p-5 sm:p-6 flex flex-col flex-grow relative min-h-0">
           <div className="absolute top-5 sm:top-6 left-5 sm:left-6 h-10 sm:h-12 w-10 sm:w-12 text-accent/20 pointer-events-none">
             {ICONS.quote}

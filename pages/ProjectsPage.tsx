@@ -68,7 +68,7 @@ const ProjectsPage: React.FC = () => {
               <button 
                 key={tag}
                 onClick={() => handleTagToggle(tag)}
-                className={`font-mono text-sm px-3 py-1 border-2 transition-colors duration-300 ${selectedTags.includes(tag) ? 'bg-accent text-background border-accent' : 'bg-primary text-accent/80 border-accent/30 hover:border-accent'}`}
+                className={`font-mono text-sm px-3 py-1 border-2 transition-colors duration-300 btn-press ${selectedTags.includes(tag) ? 'bg-accent text-background border-accent' : 'bg-primary text-accent/80 border-accent/30 hover:border-accent'}`}
                 data-cursor-interactive
               >
                 {tag}

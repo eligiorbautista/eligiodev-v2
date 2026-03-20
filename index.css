@@ -7,4 +7,45 @@
   .animate-fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
   }
+  
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px -10px rgba(255, 99, 71, 0.15);
+  }
+  
+  .btn-press {
+    transition: transform 0.1s ease;
+  }
+  
+  .btn-press:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #212429;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6347;
 }

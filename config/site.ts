@@ -42,11 +42,11 @@ export const NAVIGATION_LINKS = [
 ];
 
 export const SECTION_TITLES = {
-  about: "01. About Me",
-  projects: "02. Some Things I've Built",
-  experience: "03. Experience",
-  certificates: "04. Certificates & Awards",
-  testimonials: "05. Testimonials",
+  about: "About Me",
+  projects: "Some Things I've Built",
+  experience: "Experience",
+  certificates: "Certificates & Awards",
+  testimonials: "Testimonials",
 };
 
 export const SKILLS = [
