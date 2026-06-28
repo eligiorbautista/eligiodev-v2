@@ -56,7 +56,7 @@ export const PROJECTS: Project[] = [
     title: "NiyogHub Web App",
     description:
       "NiyogHub is an innovative web & mobile application developed for coconut farmers in Quezon Province. This capstone project, created alongside my group mates Leonna Almendras and Nikki Bernardo, features real-time chat support, a voice AI assistant, a chat AI assistant, coconut leaf disease classification, and a suitability map.",
-    tags: ["HTML5", "CSS3", "PHP", "Laravel", "MySQL"],
+    tags: ["React", "Tailwind CSS", "Express.js", "MongoDB", "OpenAI API"],
     date: "March 2025",
     liveUrl: "",
     repoUrl: "",
