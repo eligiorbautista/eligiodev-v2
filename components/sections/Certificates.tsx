@@ -11,8 +11,13 @@ const Certificates: React.FC = () => {
   return (
     <section id="certificates" className="py-16 sm:py-20 lg:py-24">
       <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '800ms' }}>
-        <SectionTitle>{SECTION_TITLES.certificates}</SectionTitle>
-        <div className="space-y-6">
+        <div className="mb-8 sm:mb-10">
+          <SectionTitle number="05">{SECTION_TITLES.certificates}</SectionTitle>
+          <p className="text-base sm:text-lg text-text-secondary max-w-2xl leading-relaxed mt-4">
+            Certifications and credentials that validate my skills and knowledge.
+          </p>
+        </div>
+        <div className="space-y-5 sm:gap-6">
           {certificatesToShow.map((cert, index) => (
             <CertificateCard key={index} certificate={cert} />
           ))}

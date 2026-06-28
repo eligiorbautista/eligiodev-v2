@@ -11,7 +11,12 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="py-16 sm:py-20 lg:py-24">
        <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-        <SectionTitle>{SECTION_TITLES.projects}</SectionTitle>
+        <div className="mb-8 sm:mb-10">
+          <SectionTitle number="03">{SECTION_TITLES.projects}</SectionTitle>
+          <p className="text-base sm:text-lg text-text-secondary max-w-2xl leading-relaxed mt-4">
+            A selection of projects I've worked on — from web applications to interactive experiences.
+          </p>
+        </div>
         <div className="grid md:grid-cols-2 gap-5 sm:gap-6">
           {projectsToShow.map((project, index) => (
             <ProjectCard key={index} project={project} />

@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import { USER_INFO } from "../../config/site";
-import PasswordModal from "../ui/modals/PasswordModal";
-import Toast from "../ui/Toast";
 import ProfileImageModal from "../ui/modals/ProfileImageModal";
 
 const Hero: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [showToast, setShowToast] = useState(false);
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
 
   const handleScrollToProjects = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -14,20 +10,6 @@ const Hero: React.FC = () => {
     const projectsSection = document.getElementById("projects");
     if (projectsSection) {
       projectsSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const handlePasswordSubmit = (password: string) => {
-    if (password === USER_INFO.resumePassword) {
-      setIsModalOpen(false);
-      const link = document.createElement("a");
-      link.href = USER_INFO.resumeUrl;
-      link.setAttribute("download", "Resume_BautistaEligio.pdf");
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } else {
-      setShowToast(true);
     }
   };
 
@@ -63,13 +45,6 @@ const Hero: React.FC = () => {
             >
               {USER_INFO.hero.cta}
             </a>
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="inline-block font-mono text-sm sm:text-base bg-transparent border-2 border-accent-secondary text-accent-secondary px-5 py-2.5 sm:px-7 sm:py-3 hover:bg-accent-secondary/10 focus:outline-none focus:ring-2 focus:ring-accent-secondary focus:ring-offset-2 focus:ring-offset-background transition-all duration-300 btn-press"
-              data-cursor-interactive
-            >
-              {USER_INFO.hero.resumeCta}
-            </button>
           </div>
         </div>
         <div className="order-1 lg:order-2 lg:col-span-2 flex items-center justify-center mb-4 sm:mb-8 lg:mb-0">
@@ -89,16 +64,6 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </section>
-      <PasswordModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        onSubmit={handlePasswordSubmit}
-      />
-      <Toast
-        message="Incorrect password. Please try again."
-        isVisible={showToast}
-        onClose={() => setShowToast(false)}
-      />
       <ProfileImageModal
         isOpen={isImageModalOpen}
         imageUrl={USER_INFO.hero.profileImageUrl}

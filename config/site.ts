@@ -24,7 +24,7 @@ export const USER_INFO = {
   },
 
   contact: {
-    title: "06. What's Next?",
+    title: "07. What's Next?",
     headline: "Get In Touch",
     description:
       "My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!",
@@ -34,6 +34,7 @@ export const USER_INFO = {
 
 export const NAVIGATION_LINKS = [
   { href: "#about", label: "About" },
+  { href: "#services", label: "Services" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#certificates", label: "Certificates" },
@@ -43,6 +44,7 @@ export const NAVIGATION_LINKS = [
 
 export const SECTION_TITLES = {
   about: "About Me",
+  services: "Services",
   projects: "Some Things I've Built",
   experience: "Experience",
   certificates: "Certificates & Awards",

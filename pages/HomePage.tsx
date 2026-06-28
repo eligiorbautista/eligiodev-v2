@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Header from '../components/layout/Header';
 import Hero from '../components/sections/Hero';
 import About from '../components/sections/About';
+import Services from '../components/sections/Services';
 import Projects from '../components/sections/Projects';
 import Experience from '../components/sections/Experience';
 import Certificates from '../components/sections/Certificates';
@@ -35,6 +36,7 @@ const HomePage: React.FC = () => {
       <main className="container mx-auto px-4 md:px-8 lg:px-16 xl:px-24">
         <Hero />
         <About />
+        <Services />
         <Projects />
         <Experience />
         <Certificates />

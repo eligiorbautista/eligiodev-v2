@@ -23,10 +23,15 @@ const Experience: React.FC = () => {
   return (
     <section id="experience" className="py-16 sm:py-20 lg:py-24">
       <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
-        <SectionTitle>{SECTION_TITLES.experience}</SectionTitle>
+        <div className="mb-8 sm:mb-10">
+          <SectionTitle number="04">{SECTION_TITLES.experience}</SectionTitle>
+          <p className="text-base sm:text-lg text-text-secondary max-w-2xl leading-relaxed mt-4">
+            My professional journey so far — roles that shaped my skills as a developer.
+          </p>
+        </div>
         <div className="flex flex-col md:flex-row gap-6 sm:gap-8 min-h-[300px]">
           {/* Company Tabs */}
-          <div ref={containerRef} className="relative flex md:flex-col overflow-x-auto md:overflow-x-visible border-b-2 md:border-b-0 md:border-l-2 border-accent/20">
+          <div ref={containerRef} className="relative flex md:flex-col overflow-x-auto md:overflow-x-visible bg-primary/30 border border-accent/10 p-2 sm:p-3 md:p-4 md:w-64 lg:w-72 flex-shrink-0">
             {EXPERIENCE.map((job, index) => (
               <button
                 key={index}
@@ -50,11 +55,11 @@ const Experience: React.FC = () => {
           </div>
           
           {/* Job Details */}
-          <div className="flex-grow space-y-4">
-            <h3 className="text-xl sm:text-2xl font-bold text-text-main">
+          <div className="flex-grow bg-primary/30 border border-accent/10 p-6 sm:p-7 lg:p-8 hover:border-accent/20 transition-all duration-300">
+            <h3 className="text-xl sm:text-2xl font-bold text-text-main mb-1">
               {activeJob.role} <span className="text-accent">@ {activeJob.company}</span>
             </h3>
-            <p className="font-mono text-xs sm:text-sm text-text-secondary">{activeJob.duration}</p>
+            <p className="font-mono text-xs sm:text-sm text-text-secondary mb-5 sm:mb-6">{activeJob.duration}</p>
             <ul className="space-y-3">
               {activeJob.description.map((item, index) => (
                 <li key={index} className="flex items-start">

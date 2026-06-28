@@ -11,7 +11,12 @@ const Testimonials: React.FC = () => {
   return (
     <section id="testimonials" className="py-16 sm:py-20 lg:py-24">
       <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '1000ms' }}>
-        <SectionTitle>{SECTION_TITLES.testimonials}</SectionTitle>
+        <div className="mb-8 sm:mb-10">
+          <SectionTitle number="06">{SECTION_TITLES.testimonials}</SectionTitle>
+          <p className="text-base sm:text-lg text-text-secondary max-w-2xl leading-relaxed mt-4">
+            What clients and collaborators have to say about working with me.
+          </p>
+        </div>
         <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6">
           {testimonialsToShow.map((testimonial, index) => (
             <TestimonialCard key={index} testimonial={testimonial} />
