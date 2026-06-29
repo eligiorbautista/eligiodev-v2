@@ -86,35 +86,40 @@ const PRICING_TIERS: PricingTier[] = [
       'Mobile-first responsive design',
       'Contact form + Google Maps',
       'Basic on-page SEO',
-      '1 week delivery',
+      'SSL certificate + HTTPS setup',
+      'Social media icons & links',
     ],
   },
   {
     name: 'Business Package',
     price: '₱30,000',
     period: 'one-time',
-    description: 'Everything you need for a professional business presence.',
+    description: 'Everything in Starter Build, plus more power and flexibility.',
     features: [
+      'Everything in Starter Build',
       'Up to 7 custom pages',
       'Custom animations & interactions',
       'Blog or CMS integration',
       'Advanced SEO + Analytics setup',
       'Social media integration',
-      '2 week delivery',
+      'Speed optimization & lazy loading',
+      'Google Business Profile setup',
     ],
     highlighted: true,
   },
   {
-    name: 'Monthly Care',
-    price: '₱3,000',
-    period: 'month',
-    description: 'Ongoing support and updates after your site goes live.',
+    name: 'Premium Build',
+    price: '₱80,000',
+    period: 'one-time',
+    description: 'Everything in Business Package, plus advanced features & integrations.',
     features: [
-      '5 content changes per month',
-      'Security monitoring & backups',
-      'Performance optimization',
-      'Plugin/framework updates',
-      'Priority email support',
+      'Everything in Business Package',
+      'Up to 15 custom pages',
+      'E-commerce / online store setup',
+      'User login & dashboard',
+      'Custom API integrations',
+      'Multi-language support',
+      'Priority delivery & support',
     ],
   },
 ];
@@ -211,6 +216,40 @@ const Services: React.FC = () => {
                 </ul>
               </div>
             ))}
+          </div>
+
+          {/* Monthly Care Add-on */}
+          <div className="mt-8 sm:mt-10 bg-primary/30 border border-accent/10 p-6 sm:p-7 lg:p-8">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h4 className="text-base sm:text-lg font-bold text-text-main mb-1">
+                  Monthly Care — ₱3,000/month
+                </h4>
+                <p className="text-sm text-text-secondary/70">
+                  Ongoing support after your site goes live. Add this to any package.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-x-6 gap-y-2">
+                <span className="text-sm text-text-secondary/80 flex items-center gap-2">
+                  <svg className="w-4 h-4 text-accent/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  5 content updates/mo
+                </span>
+                <span className="text-sm text-text-secondary/80 flex items-center gap-2">
+                  <svg className="w-4 h-4 text-accent/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Security & backups
+                </span>
+                <span className="text-sm text-text-secondary/80 flex items-center gap-2">
+                  <svg className="w-4 h-4 text-accent/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Priority support
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

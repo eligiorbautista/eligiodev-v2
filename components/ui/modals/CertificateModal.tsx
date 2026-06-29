@@ -38,7 +38,10 @@ const CertificateModal: React.FC<CertificateModalProps> = ({ isOpen, imageUrl, a
           />
         </div>
 
-        <div className="w-full lg:w-1/3 flex flex-col justify-center space-y-3 sm:space-y-4 md:space-y-6 p-3 sm:p-4 md:p-6 bg-primary/50 border border-accent/20 rounded-lg max-h-[60vh] sm:max-h-[70vh] md:max-h-[85vh] overflow-y-auto">
+        <div className="w-full lg:w-1/3 flex flex-col justify-center space-y-3 sm:space-y-4 md:space-y-6 p-4 sm:p-6 md:p-8 bg-primary/30 border border-accent/10 max-h-[60vh] sm:max-h-[70vh] md:max-h-[85vh] overflow-y-auto relative">
+          {/* Decorative corners */}
+          <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-accent/20" />
+          <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-accent/20" />
           <div>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-main mb-1.5 sm:mb-2">{certificateData.title}</h2>
             <p className="text-sm sm:text-base md:text-lg text-text-secondary mb-3 sm:mb-4">

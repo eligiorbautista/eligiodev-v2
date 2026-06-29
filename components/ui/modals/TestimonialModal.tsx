@@ -17,7 +17,10 @@ const TestimonialModal: React.FC<TestimonialModalProps> = ({ isOpen, onClose, te
         onClick={(e) => e.stopPropagation()}
         style={{ margin: 'auto', alignItems: 'center', justifyContent: 'center' }}
       >
-        <div className="w-full max-w-2xl mx-auto flex flex-col justify-center space-y-3 sm:space-y-4 md:space-y-6 p-3 sm:p-4 md:p-6 bg-primary/50 border border-accent/20 rounded-lg max-h-[60vh] sm:max-h-[70vh] md:max-h-[85vh] overflow-y-auto">
+        <div className="w-full max-w-2xl mx-auto flex flex-col justify-center space-y-3 sm:space-y-4 md:space-y-6 p-4 sm:p-6 md:p-8 bg-primary/30 border border-accent/10 max-h-[60vh] sm:max-h-[70vh] md:max-h-[85vh] overflow-y-auto relative">
+          {/* Decorative corners */}
+          <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-accent/20" />
+          <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-accent/20" />
           <div className="relative">
             <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 md:-top-4 md:-left-4 h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-accent/20">
               {ICONS.quote}
