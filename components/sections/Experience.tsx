@@ -21,7 +21,7 @@ const Experience: React.FC = () => {
   }, [activeJobIndex]);
 
   return (
-    <section id="experience" className="py-16 sm:py-20 lg:py-24">
+    <section id="experience" className="py-16 sm:py-20 lg:py-24 overflow-hidden">
       <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 sm:mb-14 lg:mb-16">
@@ -41,35 +41,57 @@ const Experience: React.FC = () => {
 
         <div className="flex flex-col md:flex-row gap-6 sm:gap-8 min-h-[300px]">
           {/* Company Tabs */}
-          <div ref={containerRef} className="relative flex md:flex-col overflow-x-auto md:overflow-x-visible md:w-64 lg:w-72 flex-shrink-0">
-            {/* Decorative top accent */}
-            <div className="hidden md:block absolute top-0 left-0 w-full h-px bg-accent/10" />
-            
-            {EXPERIENCE.map((job, index) => (
-              <button
-                key={index}
-                ref={(el) => { if (el) tabsRef.current[index] = el; }}
-                onClick={() => setActiveJobIndex(index)}
-                className={`relative z-10 w-full text-left font-mono whitespace-nowrap px-4 py-3.5 sm:px-5 sm:py-4 text-xs sm:text-sm border-l-2 transition-all duration-300 ${
-                  activeJobIndex === index 
-                    ? 'text-accent border-accent bg-accent/5' 
-                    : 'text-text-secondary border-accent/10 hover:text-accent hover:bg-accent/5 hover:border-accent/30'
-                }`}
-              >
-                <span className="block font-bold">{job.company}</span>
-                <span className="block text-[10px] sm:text-xs text-text-secondary/50 mt-1">{job.duration}</span>
-              </button>
-            ))}
-            <div
-              className="hidden md:block absolute left-0 w-0.5 bg-accent transition-transform duration-300 ease-out"
-              style={{ 
-                transform: indicatorStyle.transform,
-                height: '48px',
-                top: '0'
-              }}
-            />
-            {/* Decorative bottom accent */}
-            <div className="hidden md:block absolute bottom-0 left-0 w-full h-px bg-accent/10" />
+          <div className="w-full md:w-64 lg:w-72 flex-shrink-0">
+            {/* Mobile: Horizontal scrollable tabs */}
+            <div className="md:hidden overflow-x-auto pb-2 -mx-4 px-4 scrollbar-hide">
+              <div className="flex gap-2 min-w-max">
+                {EXPERIENCE.map((job, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveJobIndex(index)}
+                    className={`text-left font-mono px-3 py-2 text-xs border transition-all duration-300 flex-shrink-0 ${
+                      activeJobIndex === index 
+                        ? 'text-accent border-accent bg-accent/5' 
+                        : 'text-text-secondary border-accent/10 hover:text-accent hover:border-accent/30'
+                    }`}
+                  >
+                    <span className="block font-bold whitespace-nowrap">{job.company}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Desktop: Vertical tabs with indicator */}
+            <div ref={containerRef} className="hidden md:block relative">
+              {/* Decorative top accent */}
+              <div className="absolute top-0 left-0 w-full h-px bg-accent/10" />
+              
+              {EXPERIENCE.map((job, index) => (
+                <button
+                  key={index}
+                  ref={(el) => { if (el) tabsRef.current[index] = el; }}
+                  onClick={() => setActiveJobIndex(index)}
+                  className={`relative z-10 w-full text-left font-mono px-4 py-3.5 sm:px-5 sm:py-4 text-xs sm:text-sm border-l-2 transition-all duration-300 ${
+                    activeJobIndex === index 
+                      ? 'text-accent border-accent bg-accent/5' 
+                      : 'text-text-secondary border-accent/10 hover:text-accent hover:bg-accent/5 hover:border-accent/30'
+                  }`}
+                >
+                  <span className="block font-bold">{job.company}</span>
+                  <span className="block text-[10px] sm:text-xs text-text-secondary/50 mt-1">{job.duration}</span>
+                </button>
+              ))}
+              <div
+                className="absolute left-0 w-0.5 bg-accent transition-transform duration-300 ease-out"
+                style={{ 
+                  transform: indicatorStyle.transform,
+                  height: '48px',
+                  top: '0'
+                }}
+              />
+              {/* Decorative bottom accent */}
+              <div className="absolute bottom-0 left-0 w-full h-px bg-accent/10" />
+            </div>
           </div>
           
           {/* Job Details */}
