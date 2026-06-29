@@ -35,7 +35,7 @@ const Testimonials: React.FC = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
           {testimonialsToShow.map((testimonial, index) => (
             <div key={index} className="relative">
               {/* Number badge */}
