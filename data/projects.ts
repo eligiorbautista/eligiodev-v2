@@ -2,6 +2,16 @@ import { Project } from "../types";
 
 export const PROJECTS: Project[] = [
   {
+    image: "./assets/projects/project-8.png",
+    title: "Wayabest Inventory",
+    description:
+      "Wayabest is an end-to-end inventory management system built for a food-trading business, handling everything from purchasing raw materials and tracking stock through FIFO costing, to processing production runs and managing sales orders with real-time profit margin checks. It keeps the books tight by logging every transaction in an audit trail, prevents overselling with live stock validation, and gives the owner full visibility into what's in the warehouse, what's committed, and what's profitable — all from a single dashboard.",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
+    date: "2025 - 2026",
+    liveUrl: "",
+    repoUrl: "",
+  },
+  {
     image: "./assets/projects/project-7.png",
     title: "Sent. Candles - Marketing Site & CMS",
     description:
