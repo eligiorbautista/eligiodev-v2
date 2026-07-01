@@ -5,9 +5,9 @@ export const PROJECTS: Project[] = [
     image: "./assets/projects/project-8.png",
     title: "Wayabest Inventory",
     description:
-      "Wayabest is an end-to-end inventory management system built for a food-trading business, handling everything from purchasing raw materials and tracking stock through FIFO costing, to processing production runs and managing sales orders with real-time profit margin checks. It keeps the books tight by logging every transaction in an audit trail, prevents overselling with live stock validation, and gives the owner full visibility into what's in the warehouse, what's committed, and what's profitable — all from a single dashboard.",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
-    date: "2025 - 2026",
+      "A custom inventory and sales tracking system I built for a local food-trading business to help them move away from spreadsheets. It handles purchasing, stock levels, production tracking, and sales orders in one place. Business owners can see what items are in stock, what's already committed to orders, and whether each sale is actually profitable — all without having to jump between different tools.",
+    tags: ["Next.js", "React", "TypeScript", "Turso (libSQL)", "Tailwind CSS"],
+    date: "June 2026",
     liveUrl: "",
     repoUrl: "",
   },
