@@ -5,8 +5,8 @@ export const PROJECTS: Project[] = [
     image: "./assets/projects/project-8.png",
     title: "Wayabest Inventory",
     description:
-      "A custom inventory and sales tracking system I built for a local food-trading business to help them move away from spreadsheets. It handles purchasing, stock levels, production tracking, and sales orders in one place. Business owners can see what items are in stock, what's already committed to orders, and whether each sale is actually profitable — all without having to jump between different tools.",
-    tags: ["Next.js", "React", "TypeScript", "Turso (libSQL)", "Tailwind CSS"],
+      "A custom inventory, sales tracking, and expense management system I built for a local food-trading business to help them move away from spreadsheets. It handles purchasing, stock levels, production tracking, sales orders, and daily expenses in one place. Business owners can see what items are in stock, what's already committed to orders, whether each sale is actually profitable, and where their money is going — all without having to jump between different tools.",
+    tags: ["Next.js", "React", "TypeScript", "TursoDB", "Tailwind CSS"],
     date: "June 2026",
     liveUrl: "",
     repoUrl: "",
