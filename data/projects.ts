@@ -12,6 +12,16 @@ export const PROJECTS: Project[] = [
     repoUrl: "",
   },
   {
+    image: "./assets/projects/project-9.png",
+    title: "DRM Streaming Platform",
+    description:
+      "A secure live streaming platform I built for content creators and businesses who want to keep their video content exclusive. It lets you broadcast live while controlling exactly who can watch, so your content doesn't end up somewhere you didn't intend. Whether you're running paid classes, private webinars, or members-only events, you decide who gets in — and the platform makes sure it stays that way.",
+    tags: ["React", "Express.js", "WebRTC", "Node.js"],
+    date: "March 2026",
+    liveUrl: "",
+    repoUrl: "",
+  },
+  {
     image: "./assets/projects/project-7.png",
     title: "Sent. Candles - Marketing Site & CMS",
     description:
