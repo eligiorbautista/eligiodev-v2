@@ -15,7 +15,7 @@ export const PROJECTS: Project[] = [
     image: "./assets/projects/project-9.png",
     title: "DRM Streaming Platform",
     description:
-      "A secure live streaming platform I built for content creators and businesses who want to keep their video content exclusive. It lets you broadcast live while controlling exactly who can watch, so your content doesn't end up somewhere you didn't intend. Whether you're running paid classes, private webinars, or members-only events, you decide who gets in — and the platform makes sure it stays that way.",
+      "A secure live streaming platform I built for content creators and businesses who want to keep their video content exclusive. Think of how Netflix works — when someone tries to screenshot or screen-record a movie, the video just goes black and nothing gets captured. This platform does the same thing for your live streams. It lets you broadcast while controlling exactly who can watch, and if anyone tries to record or screenshot your content, the stream goes dark on their end. Whether you're running paid classes, private webinars, or members-only events, you decide who gets in and your content stays protected.",
     tags: ["React", "Express.js", "WebRTC", "Node.js"],
     date: "March 2026",
     liveUrl: "",
